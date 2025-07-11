@@ -1,125 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome to Knezha</title>
-<link rel="stylesheet" href="css/style.css" />
-<style>
-body {
-margin: 0;
-font-family: 'Segoe UI', sans-serif;
-background-color: #fefbe9;
-color: #333;
-}
-header {
-background: linear-gradient(90deg, #a3d977, #f9d74c);
-padding: 1rem;
-text-align: center;
-color: #fff;
-}
-nav {
-background: #fff;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-display: flex;
-justify-content: center;
-gap: 2rem;
-padding: 0.75rem;
-flex-wrap: wrap;
-}
-nav a {
-text-decoration: none;
-color: #3a3a3a;
-font-weight: bold;
-}
-nav a:hover {
-color: #f9a825;
-}
-.hero {
-position: relative;
-text-align: center;
-margin-top: 1rem;
-}
-.hero h2 {
-position: absolute;
-top: 15%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-background-color: rgba(0, 0, 0, 0.5);
-padding: 0.5rem 1rem;
-border-radius: 8px;
-font-size: 2rem;
-}
-.hero img {
-width: 100%;
-max-height: 400px;
-object-fit: cover;
-display: block;
-}
-.content {
-padding: 2rem;
-max-width: 800px;
-margin: auto;
-}
-.content h3 {
-color: #388e3c;
-}
-footer {
-text-align: center;
-padding: 1rem;
-background-color: #f4f4f4;
-margin-top: 2rem;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Knezha – Welcome</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-<header>
-<h1>Town of Knezha</h1>
-</header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="gallery.html">Gallery</a>
-<a href="news.html">News</a>
-<a href="events.html">Events</a>
-<a href="newsletter.html">Subsribe</a>
-<a href="login.html">Login</a>
-</nav>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<div class="hero">
-<img src="images/img1.jpg" alt="Welcome Image" />
-</div>
+  <!-- Hero -->
+  <section class="hero-section">
+    <img src="images/knezha-panorama.jpg" alt="Knezha Panorama">
+  </section>
 
-<div class="content">
-<h3>About Knezha</h3>
-<p>
-Knezha is a town in Pleven District, Central Northern Bulgaria. Knezha is the administrative and economic center of the Knezha municipality of the same name.
-Knezha received city status on November 23, 1943.
-</p>
-<p>
-Location: Knezha, Pleven Region, Bulgaria
-</p>
-<iframe
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.276635258517!2d24.116112115470905!3d43.499555079125116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a8db1f50babe27%3A0xb617730d1cd4e5a7!2sKnezha!5e0!3m2!1sen!2sbg!4v1625062823853!5m2!1sen!2sbg"
-width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
-</div>
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container center">
+      <h1>Welcome to Knezha</h1>
+      <p class="larger-text">
+        Knezha is a small and beautiful town in northern Bulgaria, known for its agricultural heritage and warm community. Discover its green landscapes, peaceful lifestyle, and local traditions.
+      </p>
+    </div>
+  </section>
 
-<footer>
-&copy; 2025 Town of Knezha. All Rights Reserved.
-<section style="padding: 2rem; background: #fefcd1; text-align: center;">
-<h2 style="color: #6a9d00;">Contact Us</h2>
-<form style="max-width: 500px; margin: auto; text-align: left;">
-<label>Name:</label>
-<input type="text" required style="width: 100%; padding: 0.6rem; margin-bottom: 1rem;">
-<label>Email:</label>
-<input type="email" required style="width: 100%; padding: 0.6rem; margin-bottom: 1rem;">
-<label>Message:</label>
-<textarea required style="width: 100%; padding: 0.6rem; height: 120px;"></textarea>
-<button type="submit" style="padding: 0.7rem 1rem; background: #f7b801; border: none; color: white; margin-top: 1rem; border-radius: 5px;">Send</button>
-</form>
-</section>
-</footer>
+  <!-- News Section -->
+  <section class="news-section">
+    <div class="container center">
+      <h2>Latest News</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <img src="images/news1.jpg" alt="Festival">
+          <h3>Local Festival Announced</h3>
+          <p>Knezha’s summer festival returns this August...</p>
+          <a href="news-details1.html" class="btn">Read More</a>
+        </div>
+        <div class="news-card">
+          <img src="images/news2.jpg" alt="Library">
+          <h3>New Library Opened</h3>
+          <p>The town opens a modern library with digital services...</p>
+          <a href="news-details2.html" class="btn">Read More</a>
+        </div>
+        <div class="news-card">
+          <img src="images/news3.jpg" alt="Sports">
+          <h3>Sports Weekend Recap</h3>
+          <p>Local athletes performed at regional events...</p>
+          <a href="news-details3.html" class="btn">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="container center">
+      <h2>Join Our Newsletter</h2>
+      <form>
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>Phone: +359 9123 456 78</p>
+        <p>Email: info@knezha.bg</p>
+        <p>Address: 1 Knez Boris I St., Knezha</p>
+      </div>
+      <div class="map-box">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=..." 
+          width="100%" height="150" 
+          style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+    <p class="center copyright">© 2025 Town of Knezha</p>
+  </footer>
+
 </body>
 </html>
