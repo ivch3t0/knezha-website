@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>News - Town of Knezha</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+background-color: #f2f2f2;
+}
+
+.main-header {
+background-color: #007acc;
+color: white;
+padding: 30px;
+text-align: center;
+}
+
+.navbar {
+background-color: #005fa3;
+display: flex;
+justify-content: center;
+gap: 20px;
+padding: 10px 0;
+}
+
+.navbar a {
+color: white;
+text-decoration: none;
+padding: 8px 16px;
+transition: background 0.3s;
+}
+
+.navbar a:hover,
+.navbar .active {
+background-color: #00497a;
+border-radius: 4px;
+}
+
+.news-section {
+max-width: 1000px;
+margin: 40px auto;
+padding: 0 20px;
+}
+
+.news-card {
+background-color: white;
+border-radius: 10px;
+margin-bottom: 30px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+padding: 20px;
+transition: transform 0.3s;
+}
+
+.news-card:hover {
+transform: scale(1.01);
+}
+
+.news-title {
+font-size: 1.4rem;
+margin-bottom: 10px;
+color: #333;
+}
+
+.news-date {
+font-size: 0.9rem;
+color: #777;
+margin-bottom: 15px;
+}
+
+.news-summary {
+font-size: 1rem;
+color: #555;
+}
+
+.read-more {
+display: inline-block;
+margin-top: 15px;
+background-color: #007acc;
+color: white;
+padding: 8px 14px;
+border-radius: 5px;
+text-decoration: none;
+}
+
+.read-more:hover {
+background-color: #005f99;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+background-color: #e6e6e6;
+margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+<header class="main-header">
+<h1>Latest News from Knezha</h1>
+<p>Stay up to date with what's happening in our town</p>
+</header>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="news.html" class="active">News</a>
+<a href="contact.html">Contact</a>
+<a href="login.html">Login</a>
+</nav>
+
+<main class="news-section">
+<div class="news-card">
+<div class="news-title">Cultural Festival Coming This August</div>
+<div class="news-date">July 5, 2025</div>
+<div class="news-summary">
+The annual cultural festival in Knezha will feature local art, music, food, and traditional performances.
+</div>
+<a href="news1.html" class="read-more">Read more</a>
+</div>
+
+<div class="news-card">
+<div class="news-title">New Park Renovation Completed</div>
+<div class="news-date">June 22, 2025</div>
+<div class="news-summary">
+The central town park has been fully renovated with new benches, playgrounds, and lighting.
+</div>
+<a href="news2.html" class="read-more">Read more</a>
+</div>
+
+<div class="news-card">
+<div class="news-title">Blood Donation Campaign Success</div>
+<div class="news-date">June 10, 2025</div>
+<div class="news-summary">
+Over 150 people participated in the Red Cross blood donation event held at the community center.
+</div>
+<a href="news3.html" class="read-more">Read more</a>
+</div>
+</main>
+
+<footer>
+<p>© 2025 Town of Knezha. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

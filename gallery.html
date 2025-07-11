@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Gallery - Town of Knezha</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+.gallery-page {
+padding: 30px;
+background: #f0f8ff;
+text-align: center;
+}
+.filter-buttons {
+margin-bottom: 20px;
+}
+.filter-buttons button {
+margin: 0 10px;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+background-color: #007acc;
+color: white;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+.filter-buttons button:hover {
+background-color: #005a99;
+}
+.gallery-grid {
+display: flex;
+overflow-x: auto;
+gap: 20px;
+padding: 20px 0;
+}
+.gallery-grid img {
+max-width: 300px;
+height: auto;
+border-radius: 10px;
+cursor: pointer;
+transition: transform 0.3s;
+}
+.gallery-grid img:hover {
+transform: scale(1.05);
+}
+.modal {
+display: none;
+position: fixed;
+z-index: 999;
+padding-top: 60px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+margin: auto;
+display: block;
+max-width: 80%;
+}
+.modal-content, #caption {
+animation-name: zoom;
+animation-duration: 0.6s;
+}
+@keyframes zoom {
+from {transform: scale(0)}
+to {transform: scale(1)}
+}
+.close {
+position: absolute;
+top: 30px;
+right: 35px;
+color: #f1f1f1;
+font-size: 40px;
+font-weight: bold;
+transition: 0.3s;
+cursor: pointer;
+}
+.close:hover {
+color: #bbb;
+}
+.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<header class="main-header">
+<h1>Gallery of Knezha</h1>
+<p>Explore beautiful places from our town</p>
+</header>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="gallery.html" class="active">Gallery</a>
+<a href="news.html">News</a>
+<a href="contact.html">Contact</a>
+<a href="login.html">Login</a>
+</nav>
+
+<main class="gallery-page">
+<div class="filter-buttons">
+<button onclick="filterImages('all')">All</button>
+<button onclick="filterImages('nature')">Nature</button>
+<button onclick="filterImages('buildings')">Buildings</button>
+</div>
+
+<section class="gallery-grid">
+<img src="images/img1.jpg" alt="City View" class="buildings">
+<img src="images/img6.jpg" alt="Town Center" class="nature">
+<img src="images/img2.jpg" alt="Square" class="nature">
+
+<img src="images/img13.jpg" alt="Park" class="buildings">
+<img src="images/img14.jpg" alt="Monument" class="buildings">
+<img src="images/img18.jpg" alt="Monument" class="buildings">
+<img src="images/img15.jpg" alt="City View" class="nature">
+
+</section>
+</main>
+
+<div id="imgModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<img class="modal-content" id="modalImg">
+<div id="caption"></div>
+</div>
+
+<footer>
+<p>© 2025 Town of Knezha. All rights reserved.</p>
+</footer>
+
+<script>
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImg");
+const captionText = document.getElementById("caption");
+const galleryImages = document.querySelectorAll(".gallery-grid img");
+
+galleryImages.forEach(img => {
+img.onclick = function () {
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+});
+
+function closeModal() {
+modal.style.display = "none";
+}
+
+function filterImages(category) {
+galleryImages.forEach(img => {
+if (category === 'all' || img.classList.contains(category)) {
+img.style.display = 'block';
+} else {
+img.style.display = 'none';
+}
+});
+}
+</script>
+
+</body>
+</html>

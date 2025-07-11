@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Contact Us - Knezha</title>
+<style>
+body {
+font-family: "Segoe UI", sans-serif;
+margin: 0;
+padding: 0;
+background: #f2f2f2;
+}
+
+/* Navigation bar */
+.navbar {
+background: #2c3e50;
+padding: 15px 30px;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.navbar a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+margin-left: 20px;
+transition: color 0.3s;
+}
+
+.navbar a:hover {
+color: #f39c12;
+}
+
+.container {
+max-width: 1100px;
+margin: auto;
+padding: 40px 20px;
+background: white;
+margin-top: 30px;
+border-radius: 8px;
+box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+color: #2c3e50;
+text-align: center;
+margin-bottom: 30px;
+}
+
+.info, .form-section {
+width: 48%;
+}
+
+.contact-wrapper {
+display: flex;
+justify-content: space-between;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+.info {
+font-size: 16px;
+line-height: 1.6;
+}
+
+iframe {
+width: 100%;
+height: 250px;
+border: none;
+border-radius: 10px;
+margin-top: 15px;
+}
+
+form {
+display: flex;
+flex-direction: column;
+}
+
+label {
+margin: 10px 0 5px;
+font-weight: bold;
+}
+
+input, textarea {
+padding: 10px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+textarea {
+resize: vertical;
+min-height: 120px;
+}
+
+button {
+margin-top: 20px;
+background: #2980b9;
+color: white;
+padding: 10px 15px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+transition: background 0.3s;
+}
+
+button:hover {
+background: #1f5f8a;
+}
+
+@media (max-width: 768px) {
+.contact-wrapper {
+flex-direction: column;
+}
+.info, .form-section {
+width: 100%;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="navbar">
+<div><strong>Knezha Town</strong></div>
+<div>
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="news.html">News</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+
+<div class="container">
+<h1>Contact Us</h1>
+
+<div class="contact-wrapper">
+<!-- Contact Info & Map -->
+<div class="info">
+<p><strong>Address:</strong> Knezha, Pleven Region, Bulgaria</p>
+<p><strong>Email:</strong> contact@knezha.bg</p>
+<p><strong>Phone:</strong> +359 123 456 789</p>
+<p><strong>Working Hours:</strong> Monday – Friday, 08:00 – 17:00</p>
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.593705646587!2d24.08420927603867!3d43.49049197111578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a99b764ee4a6cf%3A0x9792d1f93d79b369!2z0JrRg9GI0LrQtdC00LjQvdCwLCDQnNCw0YDQutC-0LLQsNC90LAsINCU0L3Qs9Cw0YDQug!5e0!3m2!1sbg!2sbg!4v1720572808565!5m2!1sbg!2sbg"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+</div>
+
+<!-- Contact Form -->
+<div class="form-section">
+<form action="#" method="post">
+<label for="name">Your Name</label>
+<input type="text" id="name" name="name" required />
+
+<label for="email">Your Email</label>
+<input type="email" id="email" name="email" required />
+
+<label for="message">Your Message</label>
+<textarea id="message" name="message" required></textarea>
+
+<button type="submit">Send Message</button>
+</form>
+</div>
+
+</div>
+</div>
+<footer>
+    <p>© 2025 Town of Knezha. All rights reserved.</p>
+  </footer>
+</body>
+</html>
