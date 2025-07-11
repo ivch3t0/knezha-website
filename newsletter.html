@@ -1,0 +1,92 @@
+<style>
+body {
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background-color: #fefbe9;
+color: #333;
+}
+header {
+background: linear-gradient(90deg, #a3d977, #f9d74c);
+padding: 1rem;
+text-align: center;
+color: #fff;
+}
+nav {
+background: #fff;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+display: flex;
+justify-content: center;
+gap: 2rem;
+padding: 0.75rem;
+flex-wrap: wrap;
+}
+nav a {
+text-decoration: none;
+color: #3a3a3a;
+font-weight: bold;
+}
+nav a:hover {
+color: #f9a825;
+}
+.hero {
+position: relative;
+text-align: center;
+margin-top: 1rem;
+}
+.hero h2 {
+position: absolute;
+top: 15%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+background-color: rgba(0, 0, 0, 0.5);
+padding: 0.5rem 1rem;
+border-radius: 8px;
+font-size: 2rem;
+}
+.hero img {
+width: 100%;
+max-height: 400px;
+object-fit: cover;
+display: block;
+}
+.content {
+padding: 2rem;
+max-width: 800px;
+margin: auto;
+}
+.content h3 {
+color: #388e3c;
+}
+footer {
+text-align: center;
+padding: 1rem;
+background-color: #f4f4f4;
+margin-top: 2rem;
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1>Subscribe</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="news.html">News</a>
+<a href="events.html">Events</a>
+<a href="newsletter.html">Subsribe</a>
+<a href="login.html">Login</a>
+</nav>
+<section id="newsletter" style="background-color: #fffecb; padding: 2rem; text-align: center;">
+<h2 style="color: #6a9d00;">Subscribe to our Newsletter</h2>
+<p style="margin-bottom: 1rem;">Get the latest news and upcoming events from Knezha directly to your email.</p>
+<form style="max-width: 400px; margin: auto;" onsubmit="subscribeNewsletter(event)">
+<input type="email" placeholder="Your email" required style="padding: 0.7rem; width: 70%; border: 1px solid #ccc; border-radius: 5px;">
+<button type="submit" style="padding: 0.7rem 1rem; background: #f7b801; color: white; border: none; border-radius: 5px;">Subscribe</button>
+</form>
+<p id="newsletter-msg" style="margin-top: 1rem; color: green;"></p>
+</section>
+

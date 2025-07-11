@@ -1,59 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Knezha</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Welcome to Knezha</title>
+<link rel="stylesheet" href="css/style.css" />
+<style>
+body {
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background-color: #fefbe9;
+color: #333;
+}
+header {
+background: linear-gradient(90deg, #a3d977, #f9d74c);
+padding: 1rem;
+text-align: center;
+color: #fff;
+}
+nav {
+background: #fff;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+display: flex;
+justify-content: center;
+gap: 2rem;
+padding: 0.75rem;
+flex-wrap: wrap;
+}
+nav a {
+text-decoration: none;
+color: #3a3a3a;
+font-weight: bold;
+}
+nav a:hover {
+color: #f9a825;
+}
+.hero {
+position: relative;
+text-align: center;
+margin-top: 1rem;
+}
+.hero h2 {
+position: absolute;
+top: 15%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+background-color: rgba(0, 0, 0, 0.5);
+padding: 0.5rem 1rem;
+border-radius: 8px;
+font-size: 2rem;
+}
+.hero img {
+width: 100%;
+max-height: 400px;
+object-fit: cover;
+display: block;
+}
+.content {
+padding: 2rem;
+max-width: 800px;
+margin: auto;
+}
+.content h3 {
+color: #388e3c;
+}
+footer {
+text-align: center;
+padding: 1rem;
+background-color: #f4f4f4;
+margin-top: 2rem;
+}
+</style>
 </head>
+
 <body>
+<header>
+<h1>Town of Knezha</h1>
+</header>
 
-  <header class="main-header">
-    <h1>Welcome to our town Knezha</h1>
-    <p>Knezha is a town in Pleven District, Central Northern Bulgaria. Knezha is the administrative and economic center of the Knezha municipality of the same name. Knezha received city status on November 23, 1943.</p>
-  </header>
+<nav>
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="news.html">News</a>
+<a href="events.html">Events</a>
+<a href="newsletter.html">Subsribe</a>
+<a href="login.html">Login</a>
+</nav>
 
-  <nav class="navbar">
-    <a href="index.html" class="active">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="news.html">News</a>
-    <a href="contact.html">Contact</a>
-    <a href="login.html">Login</a>
-  </nav>
+<div class="hero">
+<img src="images/img1.jpg" alt="Welcome Image" />
+</div>
 
-  <main>
-    <section class="hero">
-      <img src="images/img1.jpg" alt="Knezha City Hall">
-    </section>
+<div class="content">
+<h3>About Knezha</h3>
+<p>
+Knezha is a town in Pleven District, Central Northern Bulgaria. Knezha is the administrative and economic center of the Knezha municipality of the same name.
+Knezha received city status on November 23, 1943.
+</p>
+<p>
+Location: Knezha, Pleven Region, Bulgaria
+</p>
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.276635258517!2d24.116112115470905!3d43.499555079125116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a8db1f50babe27%3A0xb617730d1cd4e5a7!2sKnezha!5e0!3m2!1sen!2sbg!4v1625062823853!5m2!1sen!2sbg"
+width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+</div>
 
-    <section class="gallery-section">
-      <h2>Photo Highlights</h2>
-      <div class="slider">
-        <div class="slide-track">
-          <div class="slide"><img src="images/img3.jpg" alt="City Hall"></div>
-          <div class="slide"><img src="images/img4.jpg" alt="Fountain"></div>
-		  <div class="slide"><img src="images/img15.jpg" alt="Center"></div>
-          <div class="slide"><img src="images/img7.jpg" alt="Center"></div>
-          <div class="slide"><img src="images/img3.jpg" alt="City Hall"></div>
-          <div class="slide"><img src="images/img4.jpg" alt="Fountain"></div>
-          <div class="slide"><img src="images/img7.jpg" alt="Center"></div>
-		  <div class="slide"><img src="images/img15.jpg" alt="Center"></div>
-		  
-        </div>
-      </div>
-    </section>
-
-    <section class="location">
-      <h2>Our Location</h2>
-      <p>Knezha, Pleven District, Bulgaria</p>
-      <iframe src="https://www.google.com/maps?q=Knezha,+Bulgaria&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Town of Knezha. All rights reserved.</p>
-  </footer>
-
+<footer>
+&copy; 2025 Town of Knezha. All Rights Reserved.
+<section style="padding: 2rem; background: #fefcd1; text-align: center;">
+<h2 style="color: #6a9d00;">Contact Us</h2>
+<form style="max-width: 500px; margin: auto; text-align: left;">
+<label>Name:</label>
+<input type="text" required style="width: 100%; padding: 0.6rem; margin-bottom: 1rem;">
+<label>Email:</label>
+<input type="email" required style="width: 100%; padding: 0.6rem; margin-bottom: 1rem;">
+<label>Message:</label>
+<textarea required style="width: 100%; padding: 0.6rem; height: 120px;"></textarea>
+<button type="submit" style="padding: 0.7rem 1rem; background: #f7b801; border: none; color: white; margin-top: 1rem; border-radius: 5px;">Send</button>
+</form>
+</section>
+</footer>
 </body>
 </html>

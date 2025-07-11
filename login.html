@@ -1,112 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Login | Our Town</title>
-  <style>
-    body {
-      background: linear-gradient(to right, #4facfe, #00f2fe);
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .login-container {
-      background-color: white;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      width: 100%;
-      max-width: 400px;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #0074D9;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    button {
-      width: 100%;
-      background-color: #0074D9;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: #005fa3;
-    }
-
-    .error {
-      color: red;
-      text-align: center;
-      margin-top: 10px;
-      display: none;
-    }
-
-    .back-link {
-      text-align: center;
-      margin-top: 15px;
-    }
-
-    .back-link a {
-      color: #0074D9;
-      text-decoration: none;
-    }
-
-    .back-link a:hover {
-      text-decoration: underline;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login | Knezha</title>
+<link rel="stylesheet" href="css/style.css" />
+<style>
+body {
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background: #fefbe9;
+color: #333;
+}
+header {
+background: linear-gradient(90deg, #a3d977, #f9d74c);
+padding: 1rem 0;
+text-align: center;
+color: #fff;
+}
+nav {
+background: #fff;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+display: flex;
+justify-content: center;
+gap: 2rem;
+padding: 0.75rem;
+flex-wrap: wrap;
+}
+nav a {
+text-decoration: none;
+color: #3a3a3a;
+font-weight: bold;
+}
+nav a:hover {
+color: #f9a825;
+}
+.login-container {
+max-width: 400px;
+margin: 2rem auto;
+padding: 2rem;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.login-container h2 {
+text-align: center;
+color: #388e3c;
+}
+.login-container form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+.login-container input[type="text"],
+.login-container input[type="password"] {
+padding: 0.75rem;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+.login-container input[type="submit"] {
+background-color: #a3d977;
+border: none;
+padding: 0.75rem;
+border-radius: 5px;
+color: #fff;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+.login-container input[type="submit"]:hover {
+background-color: #8bc34a;
+}
+footer {
+text-align: center;
+padding: 1rem;
+background-color: #f4f4f4;
+margin-top: 2rem;
+}
+</style>
 </head>
 <body>
+<header>
+<h1>Login</h1>
+</header>
 
-  <div class="login-container">
-    <h2>Login</h2>
-    <form onsubmit="return checkLogin()">
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <button type="submit">Sign In</button>
-    </form>
-    <p id="error-msg" class="error">Invalid username or password.</p>
-    <div class="back-link">
-      <p><a href="index.html">← Back to Home</a></p>
-    </div>
-  </div>
+<nav>
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="news.html">News</a>
+<a href="events.html">Events</a>
+<a href="newsletter.html">Subsribe</a>
+<a href="login.html">Login</a>
+</nav>
 
-  <script>
-    function checkLogin() {
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      const errorMsg = document.getElementById("error-msg");
+<div class="login-container">
+<h2>Enter your username and pass</h2>
+<form onsubmit="login(event)">
+<input type="text" id="username" placeholder="Username" required />
+<input type="password" id="password" placeholder="Password" required />
+<input type="submit" value="Login" />
+</form>
+</div>
 
-      // Example: allowed login = user: admin | pass: 1234
-      if (username === "admin" && password === "1234") {
-        window.location.href = "index.html";  // Redirect to homepage
-        return false; // stop form from actually submitting
-      } else {
-        errorMsg.style.display = "block";
-        return false; // prevent default submit
-      }
-    }
-  </script>
+<footer>
+&copy; 2025 Town of Knezha. All Rights Reserved.
+</footer>
+
+<script>
+function login(event) {
+event.preventDefault();
+const user = document.getElementById('username').value;
+const pass = document.getElementById('password').value;
+if (user === "iveta" && pass === "iveta07") {
+window.location.href = "index.html";
+} else {
+alert("Incorrect username or password.");
+}
+}
+</script>
 </body>
 </html>
