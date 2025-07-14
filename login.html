@@ -1,122 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Login | Knezha</title>
-<link rel="stylesheet" href="css/style.css" />
-<style>
-body {
-margin: 0;
-font-family: 'Segoe UI', sans-serif;
-background: #fefbe9;
-color: #333;
-}
-header {
-background: linear-gradient(90deg, #a3d977, #f9d74c);
-padding: 1rem 0;
-text-align: center;
-color: #fff;
-}
-nav {
-background: #fff;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-display: flex;
-justify-content: center;
-gap: 2rem;
-padding: 0.75rem;
-flex-wrap: wrap;
-}
-nav a {
-text-decoration: none;
-color: #3a3a3a;
-font-weight: bold;
-}
-nav a:hover {
-color: #f9a825;
-}
-.login-container {
-max-width: 400px;
-margin: 2rem auto;
-padding: 2rem;
-background-color: #fff;
-border-radius: 10px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.login-container h2 {
-text-align: center;
-color: #388e3c;
-}
-.login-container form {
-display: flex;
-flex-direction: column;
-gap: 1rem;
-}
-.login-container input[type="text"],
-.login-container input[type="password"] {
-padding: 0.75rem;
-border: 1px solid #ccc;
-border-radius: 5px;
-}
-.login-container input[type="submit"] {
-background-color: #a3d977;
-border: none;
-padding: 0.75rem;
-border-radius: 5px;
-color: #fff;
-font-weight: bold;
-cursor: pointer;
-transition: background-color 0.3s;
-}
-.login-container input[type="submit"]:hover {
-background-color: #8bc34a;
-}
-footer {
-text-align: center;
-padding: 1rem;
-background-color: #f4f4f4;
-margin-top: 2rem;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login – Knezha</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #fdd835 40%, #aed581 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-wrapper {
+      background-color: var(--white);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-wrapper h1 {
+      text-align: center;
+      color: var(--green-main);
+      margin-bottom: 24px;
+    }
+
+    .login-form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #fbc02d;
+      color: #2b2b2b;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .login-form button:hover {
+      background-color: #fdd835;
+    }
+
+    .login-note {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-<header>
-<h1>Login</h1>
-</header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="gallery.html">Gallery</a>
-<a href="news.html">News</a>
-<a href="events.html">Events</a>
-<a href="newsletter.html">Subsribe</a>
-<a href="login.html">Login</a>
-</nav>
+  <div class="login-wrapper">
+    <h1>Login</h1>
 
-<div class="login-container">
-<h2>Enter your username and pass</h2>
-<form onsubmit="login(event)">
-<input type="text" id="username" placeholder="Username" required />
-<input type="password" id="password" placeholder="Password" required />
-<input type="submit" value="Login" />
-</form>
-</div>
+    <form class="login-form" onsubmit="handleLogin(event)">
+      <label for="email">Email or Username</label>
+      <input type="text" id="email" required />
 
-<footer>
-&copy; 2025 Town of Knezha. All Rights Reserved.
-</footer>
+      <label for="password">Password</label>
+      <input type="password" id="password" required />
 
-<script>
-function login(event) {
-event.preventDefault();
-const user = document.getElementById('username').value;
-const pass = document.getElementById('password').value;
-if (user === "iveta" && pass === "iveta07") {
-window.location.href = "index.html";
-} else {
-alert("Incorrect username or password.");
-}
-}
-</script>
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="login-note">
+      Please enter your credentials to access the site.
+    </p>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      
+      localStorage.setItem('loggedIn', 'true');
+      window.location.href = "index.html";
+    }
+  </script>
+
 </body>
 </html>

@@ -1,128 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>News</title>
-<link rel="stylesheet" href="css/style.css" />
-<style>
-body {
-font-family: 'Segoe UI', sans-serif;
-background-color: #fefbe9;
-margin: 0;
-color: #333;
-}
-header {
-background: linear-gradient(90deg, #a3d977, #f9d74c);
-padding: 1rem;
-text-align: center;
-color: #fff;
-}
-nav {
-background: #fff;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-display: flex;
-justify-content: center;
-gap: 2rem;
-padding: 0.75rem;
-flex-wrap: wrap;
-}
-nav a {
-text-decoration: none;
-color: #3a3a3a;
-font-weight: bold;
-}
-nav a:hover {
-color: #f9a825;
-}
-.news-section {
-padding: 2rem;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 1.5rem;
-}
-.news-card {
-background: #fff;
-border-radius: 10px;
-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-overflow: hidden;
-display: flex;
-flex-direction: column;
-}
-.news-card img {
-width: 100%;
-height: 180px;
-object-fit: cover;
-}
-.news-card .content {
-padding: 1rem;
-}
-.news-card h3 {
-margin-top: 0;
-}
-.read-more {
-margin-top: auto;
-text-align: right;
-}
-.read-more a {
-background-color: #f9d74c;
-color: #333;
-padding: 0.5rem 1rem;
-border-radius: 5px;
-text-decoration: none;
-}
-.read-more a:hover {
-background-color: #a3d977;
-}
-footer {
-text-align: center;
-padding: 1rem;
-background-color: #f4f4f4;
-margin-top: 2rem;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News – Knezha</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<script>
+  if (localStorage.getItem('loggedIn') !== 'true') {
+    window.location.href = "login.html";
+  }
+</script>
+
+<script>
+  const nav = document.querySelector('.site-header');
+  if (!localStorage.getItem('loggedIn')) {
+    nav.style.display = 'none';
+  }
+  function logout() {
+  localStorage.removeItem('loggedIn');
+  window.location.href = "login.html";
+}
+
+</script>
 
 <body>
-<header>
-<h1>Latest News</h1>
+
+ <header class="site-header">
+  <div class="container">
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+        <li id="nav-login"><a href="login.html">Login</a></li>
+        <li id="nav-logout" style="display:none;"><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="gallery.html">Gallery</a>
-<a href="news.html">News</a>
-<a href="events.html">Events</a>
-<a href="newsletter.html">Subsribe</a>
-<a href="login.html">Login</a>
-</nav>
 
-<section class="news-section">
-<div class="news-card">
-<img src="images/img11.jpg" alt="News Image 1">
-<div class="content">
-<h3>Community Event in the Park</h3>
-<p>A beautiful day in Knezha with family games, music and food.</p>
-<div class="read-more">
-<a href="news-details1.html">Read More</a>
-</div>
-</div>
-</div>
+  <section class="news-page-section">
+    <div class="container">
 
-<div class="news-card">
-<img src="images/img12.jpg" alt="News Image 2">
-<div class="content">
-<h3>New Infrastructure Project</h3>
-<p>Construction begins on the new city square and pedestrian paths.</p>
-<div class="read-more">
-<a href="news-details2.html">Read More</a>
-</div>
-</div>
-</div>
-</section>
+      <article class="news-item">
+        <h2>School Renovation Completed</h2>
+        <img src="images/news4.jpg" alt="School Renovation">
+        <p>
+          The renovation of the primary school in Knezha has been completed ahead of schedule. 
+          New classrooms, modern lighting, and accessible restrooms have been added. 
+          The school now meets all EU safety and energy efficiency standards.
+        </p>
+      </article>
 
-<footer>
-&copy; 2025 Town of Knezha. All Rights Reserved.
-</footer>
+      <article class="news-item">
+        <h2>Public Garden Opens to Visitors</h2>
+        <img src="images/news5.jpg" alt="Public Garden">
+        <p>
+          A new public garden was opened this week next to the cultural center. 
+          It includes walking paths, benches, and a flower exhibition maintained by volunteers. 
+          Entry is free and open daily from 7:00 AM to 9:00 PM.
+        </p>
+      </article>
+
+      <article class="news-item">
+        <h2>Blood Donation Campaign This Friday</h2>
+        <img src="images/news6.jpg" alt="Blood Donation">
+        <p>
+          A mobile blood donation unit will be stationed in front of the municipality building on Friday. 
+          The campaign is organized by the Red Cross and aims to support regional hospitals. 
+          All donors will receive health checkups and small thank-you packages.
+        </p>
+      </article>
+
+      <article class="news-item">
+        <h2>Youth Debate Club Launched</h2>
+        <img src="images/news7.jpg" alt="Debate Club">
+        <p>
+          The Youth Debate Club launched its first session this week at the community center. 
+          Open to students aged 13–19, the club meets every Wednesday and discusses current topics 
+          while developing public speaking and critical thinking skills.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="site-footer compact-footer">
+    <div class="container center">
+      <h3>Contact Us</h3>
+      <p>Phone: +359 9123 456 78 &nbsp;|&nbsp; Email: info@knezha.bg</p>
+      <p>© 2025 Town of Knezha</p>
+    </div>
+  </footer>
+
 </body>
 </html>

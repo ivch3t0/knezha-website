@@ -6,30 +6,48 @@
   <title>Knezha – Welcome</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<script>
+  if (localStorage.getItem('loggedIn') !== 'true') {
+    window.location.href = "login.html";
+  }
+</script>
+
+<script>
+  const nav = document.querySelector('.site-header');
+  if (!localStorage.getItem('loggedIn')) {
+    nav.style.display = 'none';
+  }
+  function logout() {
+  localStorage.removeItem('loggedIn');
+  window.location.href = "login.html";
+}
+
+</script>
+
 <body>
 
-  <!-- Header -->
   <header class="site-header">
-    <div class="container">
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="login.html">Login</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="container">
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
-  <!-- Hero -->
+        <li id="nav-login"><a href="login.html">Login</a></li>
+        <li id="nav-logout" style="display:none;"><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
   <section class="hero-section">
     <img src="images/knezha-panorama.jpg" alt="Knezha Panorama">
   </section>
 
-  <!-- About Section -->
   <section class="about-section">
     <div class="container center">
       <h1>Welcome to Knezha</h1>
@@ -39,7 +57,6 @@
     </div>
   </section>
 
-  <!-- News Section -->
   <section class="news-section">
     <div class="container center">
       <h2>Latest News</h2>
@@ -66,7 +83,6 @@
     </div>
   </section>
 
-  <!-- Newsletter -->
   <section class="newsletter-section">
     <div class="container center">
       <h2>Join Our Newsletter</h2>
@@ -77,7 +93,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-flex">
       <div class="contact-info">
